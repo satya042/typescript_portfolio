@@ -35,18 +35,3 @@ export default Footer;
 
 //rgb(59, 65, 76)
 
-// <Box textAlign="center">
-// {siteConfig.author.accounts.map((sc, index) => (
-//   <IconButton
-//     key={index}
-//     as={Link}
-//     isExternal
-//     href={sc.url}
-//     aria-label={sc.label}
-//     size="lg"
-//     colorScheme={sc.type}
-//     icon={sc.icon}
-//     {...iconProps}
-//   />
-// ))}
-// </Box>
