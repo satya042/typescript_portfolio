@@ -157,8 +157,8 @@ const Navbar: React.FC = () => {
                 }}
                 startIcon={page.icon}
               >
-                {/* <Link  style={{textDecoration:"none",color:theme.palette.mode==="dark" ?"#ffffff":"#2ba3ff" }} to={page.link}>{" "}{page.name}</Link> */}
-                <NavbarLink style={{ color: theme.palette.mode === "dark" ? "#ffffff" : "#000000" }} to={page.link}>{page.name}</NavbarLink>
+                <Link  style={{textDecoration:"none",color:theme.palette.mode==="dark" ?"#ffffff":"#000000" }} to={page.link}>{" "}{page.name}</Link>
+                {/* <NavbarLink style={{ color: theme.palette.mode === "dark" ? "#ffffff" : "#000000" }} to={page.link}>{page.name}</NavbarLink> */}
               </Button>
             ))}
           </Box>

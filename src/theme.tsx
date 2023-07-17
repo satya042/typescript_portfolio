@@ -7,7 +7,7 @@ export const tokens = (mode: PaletteMode) => ({
   ...(mode === "dark"
     ? {
       grey: {
-        100: "#e0e0e0",
+        100: "#e0e0e0",//#1c232e
         200: "#c2c2c2",
         300: "#a3a3a3",
         400: "#858585",
@@ -22,7 +22,7 @@ export const tokens = (mode: PaletteMode) => ({
         200: "#a1a4ab",
         300: "#727681",
         400: "#182338",
-        500: "#141b2d",
+        500: "#171923",//  #141b2d
         600: "#101624",
         700: "#0c101b",
         800: "#080b12",
@@ -39,6 +39,17 @@ export const tokens = (mode: PaletteMode) => ({
         800: "#1e5245",
         900: "#0f2922",
       },
+      blueAccent: {
+        100: "#e1e2fe",//#e1e2fe
+        200: "#c3c6fd",
+        300: "#a4a9fc",
+        400: "#868dfb",
+        500: "#6870fa",
+        600: "#535ac8",
+        700: "#3e4396",
+        800: "#2a2d64",
+        900: "#151f2e",//#151612
+      },
     }
     : {
       grey: {
@@ -53,7 +64,7 @@ export const tokens = (mode: PaletteMode) => ({
         900: "#e0e0e0",
       },
       primary: {
-        100: "#040509",
+        100: "#e1e2fe", //#040509 #e1e2fe
         200: "#080b12",
         300: "#0c101b",
         400: "#f2f0f0", // manually changed
@@ -73,6 +84,17 @@ export const tokens = (mode: PaletteMode) => ({
         700: "#94e2cd",
         800: "#b7ebde",
         900: "#dbf5ee",
+      },
+      blueAccent: {
+        100: "#151632",
+        200: "#2a2d64",
+        300: "#3e4396",//#a9c6f5
+        400: "#535ac8",
+        500: "#6870fa",
+        600: "#868dfb",
+        700: "#a4a9fc",
+        800: "#e1e2fe", //#c3c6fd
+        900: "#ffffff", //#e1e2fe   color used previously
       },
     }),
 });
@@ -98,8 +120,17 @@ export const themeSettings = (mode: PaletteMode) => {
             light: colors.grey[100],
           },
           background: {
-            default: colors.primary[500],
+            default: colors.primary[800],
           },
+          navbar:{
+            default:colors.blueAccent[900],
+            main:"#ffffff",
+            hover:colors.blueAccent[900]        
+          },
+          card:{
+            main:"#1a202c",
+            border:"#2d3748"
+          }
         }
         : {
           // palette values for light mode
@@ -117,6 +148,15 @@ export const themeSettings = (mode: PaletteMode) => {
           background: {
             default: "#fcfcfc",
           },
+          navbar:{
+            default:colors.blueAccent[900],
+            main:"#000000",
+            hover:colors.blueAccent[800]
+          },
+          card:{
+            main:colors.blueAccent[900],
+            border:"#e6e6e8"
+          }
         }),
     },
     typography: {
@@ -196,6 +236,32 @@ export const useMode = () => {
   );
   const theme = React.useMemo(() => createTheme(themeSettings(mode)), [mode]);
   return [theme, colorMode] as const;
+}
+
+export const getTagColor = type => {
+  type = type.toLowerCase()
+  if (type === "rails" || type === "ruby") {
+    return "red";
+  } else if (type === "react") {
+    return "cyan";
+  } else if (type === "javascript") {
+    return "yellow";
+  } else if (type === "typescript" || type === "tailwindcss") {
+    return "blue";
+  } else if (type === "chakraui" || type === "css") {
+    return "teal";
+  }
+};
+
+export const getTagBackgroundColor = type =>{
+  type = type.toLowerCase() 
+  if(type === "react" ){
+    return "#2f414d";
+  }else if(type === "javascript"){
+    return "#3f423b";
+  }else if(type == "css"){
+    return "#2f414d";
+  }
 }
 
 
