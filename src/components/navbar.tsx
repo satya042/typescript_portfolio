@@ -1,35 +1,19 @@
 import * as React from 'react';
 import { useContext } from "react";
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
+import { useTheme, Theme, Box, AppBar, Toolbar, IconButton, Avatar, Typography, Container, Button, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { makeStyles, createStyles } from '@mui/styles';
 import UserIcon from '../assets/user_icon.png';
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { useTheme } from "@mui/material";
-import { ColorModeContext, tokens } from "../theme";
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
+import { ColorModeContext } from "../theme";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
-import { makeStyles, createStyles } from '@mui/styles';
 import { AiTwotoneThunderbolt } from "react-icons/ai";
 import { BsBook } from "react-icons/bs";
 import { RxAvatar } from "react-icons/rx";
-import { Theme } from '@mui/material';
 import { Link } from 'react-router-dom'
 import '../styles/nav.css'
-import { NavbarLink } from "../styles/nav-button-style";
 
 
 
@@ -62,7 +46,7 @@ const Navbar: React.FC = () => {
   const navItems: NavItem[] = [
     { name: "About", icon: <RxAvatar />, link: "/About" },
     { name: 'Tech Stack', icon: <AiTwotoneThunderbolt />, link: '/TechStack' },
-    { name: 'Open Source', icon: <BsBook />, link: '/OpenSource' },
+    { name: 'Open Source', icon: <BsBook />, link: '' },
   ];
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
 
@@ -98,7 +82,7 @@ const Navbar: React.FC = () => {
 
 
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  //const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
 
   return (

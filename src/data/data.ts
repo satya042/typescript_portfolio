@@ -32,41 +32,41 @@ export const companies = [
     period: "2019 - Present",
     logo: PhaedraLogo
     },
-  // {
-  //   title: "Brainx Technologies",
-  //   alt: "BT image",
-  //   role: "Software Engineer",
-  //   skills: ["ruby", "rails", "javascript", "python"],
-  //   period: "2018 - 2019",
-  //   logo: BrainxLogo
-  // },
-  // {
-  //   title: "Codenya Studio",
-  //   alt: "CS image",
-  //   role: "Co-founder, CTO",
-  //   skills: ["ruby", "rails", "python", "typescript", "react", "aws"],
-  //   period: "2018 - Present",
-  //   logo: CodenyaLogo
-  // },
-  // {
-  //   title: "Brainplow",
-  //   alt: "Brainplow image",
-  //   role: "Software Engineer",
-  //   skills: ["javascript", "python", "angular"],
-  //   period: "2017 - 2018",
-  //   logo: BrainplowLogo
-  // }
+  {
+    title: "Brainx Technologies",
+    alt: "BT image",
+    role: "Software Engineer",
+    skills: ["ruby", "rails", "javascript", "python"],
+    period: "2018 - 2019",
+    logo: BrainxLogo
+  },
+  {
+    title: "Codenya Studio",
+    alt: "CS image",
+    role: "Co-founder, CTO",
+    skills: ["ruby", "rails", "python", "typescript", "react", "aws"],
+    period: "2018 - Present",
+    logo: CodenyaLogo
+  },
+  {
+    title: "Brainplow",
+    alt: "Brainplow image",
+    role: "Software Engineer",
+    skills: ["javascript", "python", "angular"],
+    period: "2017 - 2018",
+    logo: BrainplowLogo
+  }
 ];
 
 export const institutes = [
   {
     short_title: "FAST - NUCES",
-    title: "National University of Computer and Emerging Sciences",
+    title: "Gandhi Institute of Engineering & Technology",
     alt: "Nuces image",
     role: "Bachelor's Degree in Computer Science",
     skills: ["project management", "web development", "data structures"],
-    period: "2013 - 2017",
-    startingYear: "2013",
+    period: "2019 - 2023",
+    startingYear: "2019",
     logo: UniLogo,
     awards: [
       {
@@ -90,13 +90,13 @@ export const institutes = [
     ]
   },
   {
-    short_title: "Govt Degree College",
-    title: "Govt Degree College",
+    short_title: "Newtonian Higher Secondary School",
+    title: "Newtonian Higher Secondary School",
     alt: "college image",
     role: "FSC",
     skills: ["mathematic", "chemistry", "physics"],
-    period: "2011 - 2013",
-    startingYear: "2011",
+    period: "2017 - 2019",
+    startingYear: "2017",
     logo: ""
   }
 ];
@@ -130,62 +130,62 @@ export const skills = [
     type: "development",
     image: python
   },
-  // {
-  //   name: "Javascript",
-  //   description: "Web development",
-  //   link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  //   type: "development",
-  //   image: javascript
-  // },
-  // {
-  //   name: "Typescript",
-  //   description: "Web development",
-  //   link: "https://www.typescriptlang.org/",
-  //   type: "development",
-  //   image: typescript
-  // },
-  // {
-  //   name: "Html5",
-  //   description: "Web layouts",
-  //   link: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
-  //   type: "development",
-  //   image: html5
-  // },
-  // {
-  //   name: "Css3",
-  //   description: "Web design",
-  //   link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-  //   type: "design",
-  //   image: css3
-  // },
-  // {
-  //   name: "Bootstrap",
-  //   description: "Web design",
-  //   link: "https://getbootstrap.com/",
-  //   type: "design",
-  //   image: bootstrap
-  // },
-  // {
-  //   name: "Postgres",
-  //   description: "Database",
-  //   link: "https://www.postgresql.org/",
-  //   type: "database",
-  //   image: postgres
-  // },
-  // {
-  //   name: "Mysql",
-  //   description: "Database",
-  //   link: "https://www.mysql.com/",
-  //   type: "database",
-  //   image: mysql
-  // },
-  // {
-  //   name: "Redis",
-  //   description: "Database",
-  //   link: "https://redis.io/",
-  //   type: "database",
-  //   image: redis
-  // },
+  {
+    name: "Javascript",
+    description: "Web development",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    type: "development",
+    image: javascript
+  },
+  {
+    name: "Typescript",
+    description: "Web development",
+    link: "https://www.typescriptlang.org/",
+    type: "development",
+    image: typescript
+  },
+  {
+    name: "Html5",
+    description: "Web layouts",
+    link: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+    type: "development",
+    image: html5
+  },
+  {
+    name: "Css3",
+    description: "Web design",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    type: "design",
+    image: css3
+  },
+  {
+    name: "Bootstrap",
+    description: "Web design",
+    link: "https://getbootstrap.com/",
+    type: "design",
+    image: bootstrap
+  },
+  {
+    name: "Postgres",
+    description: "Database",
+    link: "https://www.postgresql.org/",
+    type: "database",
+    image: postgres
+  },
+  {
+    name: "Mysql",
+    description: "Database",
+    link: "https://www.mysql.com/",
+    type: "database",
+    image: mysql
+  },
+  {
+    name: "Redis",
+    description: "Database",
+    link: "https://redis.io/",
+    type: "database",
+    image: redis
+  },
   // {
   //   name: "Heroku",
   //   description: "Devops",

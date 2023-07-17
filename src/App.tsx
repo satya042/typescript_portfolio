@@ -1,16 +1,16 @@
 import React from 'react';
-import { CssBaseline, ThemeProvider,useTheme } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Navbar from './components/navbar';
 import Home from './components/home';
-import Highlights from './components/highlights';
 import Footer from './components/footer';
 import './App.css';
 import {Route,Routes} from 'react-router';
 import About from './components/About';
-import OpenSource from './components/OpenSource';
 import TechStack from './components/TechStack';
-import Projects from './components/projects';
+//import OpenSource from './components/OpenSource';
+//import {useTheme} from "@mui/material"
+
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -22,18 +22,13 @@ function App() {
        <div className='app'>
         <main className='content'>
         <Navbar/> 
-        <Home/>
-        <Projects/> 
-           {/*
-          <Highlights/>
-          <Footer/>   */}
-          <Routes>
-         
+          <Routes> 
+          <Route path='/' element={<Home/>}></Route>
           <Route path="/About" element={<About/>}/> 
-          <Route path="/OpenSource" element={<OpenSource/>}/> 
           <Route path="/TechStack" element={<TechStack/>}/> 
+          {/* <Route path="/OpenSource" element={<OpenSource/>}/>  */}
           </Routes>   
-           
+          <Footer/> 
         </main>
        </div>
       </CssBaseline>
