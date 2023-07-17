@@ -13,7 +13,6 @@ import { AiTwotoneThunderbolt } from "react-icons/ai";
 import { BsBook } from "react-icons/bs";
 import { RxAvatar } from "react-icons/rx";
 import { Link } from 'react-router-dom'
-import '../styles/nav.css'
 
 
 
