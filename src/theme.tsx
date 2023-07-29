@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { createContext  } from 'react';
-import { createTheme, PaletteMode } from '@mui/material';
+import { createTheme, PaletteMode, useTheme } from '@mui/material';
 
 // color design tokens export
 export const tokens = (mode: PaletteMode) => ({
@@ -64,7 +64,7 @@ export const tokens = (mode: PaletteMode) => ({
         900: "#e0e0e0",
       },
       primary: {
-        100: "#e1e2fe", //#040509 #e1e2fe
+        100: "#f7f7fa", //#040509 #e1e2fe
         200: "#080b12",
         300: "#0c101b",
         400: "#f2f0f0", // manually changed
@@ -128,7 +128,7 @@ export const themeSettings = (mode: PaletteMode) => {
             hover:colors.blueAccent[900]        
           },
           card:{
-            main:"#1a202c",
+            main:"#1a202c", //#1a202c
             border:"#2d3748"
           }
         }
@@ -155,7 +155,7 @@ export const themeSettings = (mode: PaletteMode) => {
           },
           card:{
             main:colors.blueAccent[900],
-            border:"#e6e6e8"
+            border:"#ffffff"  //#e6e6e8
           }
         }),
     },
@@ -238,30 +238,31 @@ export const useMode = () => {
   return [theme, colorMode] as const;
 }
 
-export const getTagColor = type => {
+
+export const getTagColor = (type: string,mode:PaletteMode) => {
   type = type.toLowerCase()
   if (type === "rails" || type === "ruby") {
-    return "red";
-  } else if (type === "react") {
-    return "cyan";
-  } else if (type === "javascript") {
-    return "yellow";
-  } else if (type === "typescript" || type === "tailwindcss") {
-    return "blue";
-  } else if (type === "chakraui" || type === "css") {
-    return "teal";
+    return mode === "dark" ? "#c58d90" : "#8d3737";
+  } else if (type === "react" || type === "css") {
+    return mode === "dark" ? "cyan" : "#086f83";
+  }else if(type === "javascript"){
+    return mode === "dark" ? "yellow" : "#744210"
   }
 };
 
-export const getTagBackgroundColor = type =>{
-  type = type.toLowerCase() 
-  if(type === "react" ){
-    return "#2f414d";
+export const BackgroundTagColor = (type: string,mode:PaletteMode) => {
+  type = type.toLowerCase();
+  if (type === "rails" || type === "ruby") {
+    return mode === "dark" ? "#3f3842" : "#fed7d7";
+  } else if (type === "react" || type === "css") {
+    return mode === "dark" ? "#2f414d" : "#c4f1f9";
   }else if(type === "javascript"){
-    return "#3f423b";
-  }else if(type == "css"){
-    return "#2f414d";
+    return mode === "dark" ? "#3f423b" : "#fefcbf"
   }
-}
+};
 
+
+
+
+//#8d3737
 

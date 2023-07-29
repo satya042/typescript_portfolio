@@ -4,10 +4,13 @@ import {siteConfig} from "../configs/site-config";
 
 
 const IconNoPadding = styled(ListItemButton)(`
-  padding: 0;
+  width:50px;
+  height:40px;
+
+  padding-left: 0;
+  padding-right: 0;
   &:last-child {
-    padding-left: 0;
-    padding-right: 0;
+ 
   }
 `);
 
@@ -19,9 +22,9 @@ return(
     </Box>
     <Box sx={{ display: 'inline-flex', flexDirection: 'row' ,marginLeft:{xs:'13%',md:'20%'},paddingTop:{xs:'5%'}}}>
       {siteConfig.author.accounts.map((sc, index) => (
-        <IconNoPadding key={index} >
+        <IconNoPadding key={index} sx={{borderRadius:'7px'}} >
           <Link href={sc.url}>
-            <ListItemIcon sx={{fontSize:'18px'}}>{sc.icon}</ListItemIcon>
+            <ListItemIcon sx={{display:'flex', fontSize:'20px', justifyContent:'center',alignItems:'center'}}>{sc.icon}</ListItemIcon>
           </Link>
         </IconNoPadding>
       ))}

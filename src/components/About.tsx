@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Grid, Typography,styled, Paper, Stack ,Card,CardContent,CardMedia} from '@mui/material';
+import { useTheme,Box, Grid, Typography,styled, Paper, Stack ,Card,CardContent,CardMedia} from '@mui/material';
 import { companies, institutes } from "../data/data";
-import { getTagColor, getTagBackgroundColor } from "../theme";
+import { getTagColor, BackgroundTagColor } from "../theme";
 
 
 
@@ -30,7 +30,8 @@ interface CardProps{
   alt: string; 
 }
 
-const AboutCard: React.FC<CardProps> = ({ title, role, skills, period, logo, colorMode, alt }) => {
+const AboutCard: React.FC<CardProps> = ({ title, role, skills, period, logo }) => {
+    const theme = useTheme();
     return (
         <Box sx={{ width: '50%', height: 'auto' }}>
             <Card sx={{ display: 'flex', flexDirection: 'row', backgroundColor: 'card.main', border: '1px solid', borderRadius: '12px', borderColor: "card.border" }}>
@@ -44,7 +45,7 @@ const AboutCard: React.FC<CardProps> = ({ title, role, skills, period, logo, col
                         <Typography color="inherit" sx={{ fontSize: '15px', fontWeight: 'bold' }} noWrap={true} >{role}</Typography>
                     </CardContentNoPadding>
                     <Stack direction="row" spacing={1} sx={{ ml: 1 }}>
-                        {skills.map(tech => (<Item sx={{ color: getTagColor(tech), backgroundColor: getTagBackgroundColor(tech) }}> {tech} </Item>))}
+                        {skills.map(tech => (<Item sx={{ color: getTagColor(tech,theme.palette.mode), backgroundColor: BackgroundTagColor(tech,theme.palette.mode) }}> {tech} </Item>))}
                     </Stack>
                 </Box>
             </Card>
@@ -74,7 +75,7 @@ const About: React.FC = () => {
                             role={company.role}
                             skills={company.skills}
                             period={company.period}
-                            logo={company.logo} colorMode={''} alt={''} />
+                            logo={company.logo} colorMode={''} alt={''}  />
                     </Box>
                 ))}
             </Grid>
@@ -87,7 +88,7 @@ const About: React.FC = () => {
                             role={institute.role}
                             skills={institute.skills}
                             period={institute.period}
-                            logo={institute.logo} colorMode={''} alt={''} />
+                            logo={institute.logo} colorMode={''} alt={''}  />
                     </Box>
                 ))}
             </Grid>

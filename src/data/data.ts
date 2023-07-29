@@ -22,6 +22,7 @@ import docean from "../assets/skills/digital-ocean.png";
 import aws from "../assets/skills/aws.png";
 //import nginx from "../assets/skills/nginx.png";
 import nginx from "../assets/skills/nginx.png"
+import { item } from "../components/page-transitions";
  
 export const companies = [
   {
@@ -107,84 +108,96 @@ export const skills = [
     description: "Web development",
     link: "https://rubyonrails.org/",
     type: "development",
-    image: rails
+    image: rails,
+    item : 1
   },
   {
     name: "React",
     description: "Web development",
     link: "https://reactjs.org/",
     type: "development",
-    image: react
+    image: react,
+    item : 2
   },
   {
     name: "Ruby",
     description: "Web development, scrapping",
     link: "https://www.ruby-lang.org/en/",
     type: "development",
-    image: ruby
+    image: ruby,
+    item : 3
   },
   {
     name: "Python",
     description: "Web development, scrapping",
     link: "https://www.python.org/",
     type: "development",
-    image: python
+    image: python,
+    item : 4
   },
   {
     name: "Javascript",
     description: "Web development",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     type: "development",
-    image: javascript
+    image: javascript,
+    item : 5
   },
   {
     name: "Typescript",
     description: "Web development",
     link: "https://www.typescriptlang.org/",
     type: "development",
-    image: typescript
+    image: typescript,
+    item : 6
   },
   {
     name: "Html5",
     description: "Web layouts",
     link: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
     type: "development",
-    image: html5
+    image: html5,
+    item : 7
   },
   {
     name: "Css3",
     description: "Web design",
     link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     type: "design",
-    image: css3
+    image: css3,
+    item : 8
   },
   {
     name: "Bootstrap",
     description: "Web design",
     link: "https://getbootstrap.com/",
     type: "design",
-    image: bootstrap
+    image: bootstrap,
+    item : 9
   },
   {
     name: "Postgres",
     description: "Database",
     link: "https://www.postgresql.org/",
     type: "database",
-    image: postgres
+    image: postgres,
+    item : 10
   },
   {
     name: "Mysql",
     description: "Database",
     link: "https://www.mysql.com/",
     type: "database",
-    image: mysql
+    image: mysql,
+    item : 11
   },
   {
     name: "Redis",
     description: "Database",
     link: "https://redis.io/",
     type: "database",
-    image: redis
+    image: redis,
+    item : 12
   },
   // {
   //   name: "Heroku",

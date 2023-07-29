@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from 'framer-motion';
 //import { SlideFade } from "@chakra-ui/react";
 //import { MotionBox } from "./motion";
 
@@ -78,3 +79,54 @@ export const item = {
 // export const CardTransition = ({ children }) => {
 //   return <MotionBox variants={variants}>{children}</MotionBox>;
 // };
+export const AnimatedAvtar = ({children}) =>{
+  return (
+    <motion.image
+    initial={{
+      opacity: 0,
+      translateX: -150
+    }}
+    animate={{
+      opacity: 1,
+      translateX: 0,
+      transition: {
+        duration: 0.5
+      }
+    }}>
+     {children}
+    </motion.image>
+  )
+}
+export const AnimatedHome = ({children}) =>{
+  return (
+    <motion.span
+    initial={{
+      opacity: 0,
+      translateX: 150
+    }}
+    animate={{
+      opacity: 1,
+      translateX: 0,
+      transition: {
+        duration: 0.5
+      }
+    }}>
+     {children}
+    </motion.span>
+  )
+}
+// export const AnimatedHey = ({children}) =>{
+//   return (
+//     <motion.span
+//     animate={{
+    
+//       x: 5,
+//       x:-5,
+//       transition: {
+//         duration: 0.5
+//       }
+//     }}>
+//      {children}
+//     </motion.span>
+//   )
+// }

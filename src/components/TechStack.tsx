@@ -9,6 +9,7 @@ interface TechCard {
   image: string;
   link:string;
   description: string;
+  key:number;
 }
 
 const CardContentNoPadding = styled(CardContent)(`
@@ -18,10 +19,23 @@ const CardContentNoPadding = styled(CardContent)(`
   }
 `);
 
+function getScreenLength() {
+  const screenWidth = window.screen.width;
+  const screenHeight = window.screen.height;
+  return { width: screenWidth, height: screenHeight };
+}
+// const screenDimensions = getScreenLength();
+// console.log(screenDimensions.width); // Output: Screen width in pixels
+// console.log(screenDimensions.height); // Output: Screen height in pixels 
+
+// React.useEffect(()=>{
+
+// });
+
 //const TechStackCard = ({ name, image, link, description }) => {
-const TechStackCard:React.FC<TechCard> = ({ name, image, link, description }) => {
+const TechStackCard:React.FC<TechCard> = ({key, name, image, link, description }) => {
   return (
-        <Box sx={{width:350,height:'auto',my:.5}}>
+        <Box key={key} sx={{width:350,height:'auto',my:.5}}>
             <Card sx={{ display: 'flex', flexDirection: 'row', backgroundColor: 'card.main', border: '1px solid', borderRadius: '12px', borderColor: "card.border"}}> 
                 <CardMedia component="img" src={image} sx={{ m:1,display:'flex', justifyContent:'center',alignItems:'center',width:'50px',height:'50px'}} ></CardMedia> 
                 <Box sx={{ display: 'flex', flexDirection: 'column' ,p:1 }}>
@@ -41,18 +55,18 @@ const TechStack = () => {
        <Box sx={{marginLeft:{xs:0,md:'30%',mt:{xs:2,md:10}}}}>
       <Box sx={{ whiteSpace: 'nowrap', alignSelf: 'flex-start', fontSize: 30, fontWeight: 'bold' }}>Tech Stack</Box>
       <Typography>A list of my favorite and technologies that I use on a regular basis.</Typography>
-      <Grid>
-      <Box sx={{ m: 1,display:"flex",justifyContent:"space-between",flexDirection:'column'}}>
-        {skills.map((tool, index) =>
+      <Box sx={{ m: 1,display:"flex",justifyContent:"space-between"}}>
+      <Grid item xs={12} sm={6} md={6}>
+        {skills.map((tool) =>
           <TechStackCard 
-            key={index}
+            key={tool.item}
             link={tool.link}
             image={tool.image}
             description={tool.description}
             name={tool.name} />
         )}
-      </Box>
       </Grid>
+      </Box>
       </Box>
     </Box>
   )
