@@ -155,7 +155,7 @@ export const themeSettings = (mode: PaletteMode) => {
           },
           card:{
             main:colors.blueAccent[900],
-            border:"#ffffff"  //#e6e6e8
+            border:"#d2d7eb80"  //#e6e6e8
           }
         }),
     },
@@ -246,7 +246,13 @@ export const getTagColor = (type: string,mode:PaletteMode) => {
   } else if (type === "react" || type === "css") {
     return mode === "dark" ? "cyan" : "#086f83";
   }else if(type === "javascript"){
-    return mode === "dark" ? "yellow" : "#744210"
+    return mode === "dark" ? "yellow" : "#744210";
+  }else if(type == 'angular'){
+    return mode === "dark" ? "red":"#910017";
+   }else if(type === "java"|| "hibernate"){
+    return mode === "dark" ? "":"";
+  }else if(type === "automation testing" || "performance testing"){
+    return mode === "dark" ? "":"";
   }
 };
 
@@ -257,7 +263,15 @@ export const BackgroundTagColor = (type: string,mode:PaletteMode) => {
   } else if (type === "react" || type === "css") {
     return mode === "dark" ? "#2f414d" : "#c4f1f9";
   }else if(type === "javascript"){
-    return mode === "dark" ? "#3f423b" : "#fefcbf"
+    return mode === "dark" ? "#3f423b" : "#fefcbf";
+  }else if(type === "angular"){
+    return mode === "dark" ? "#6e5454":"#ffa491";
+  }else if(type === "java"|| "hibernate"){
+    return mode === "dark" ? "":"";
+  }else if(type === "automation testing" || "performance testing"){
+    return mode === "dark" ? "":"";
+  }else if(type === "project management"){
+    return mode === "dark"? "":"";
   }
 };
 

@@ -58,27 +58,7 @@ export const item = {
   }
 };
 
-// export const PageSlideFade = ({ children }) => {
-//   return <SlideFade in>{children}</SlideFade>;
-// };
 
-// export const StaggerChildren = ({ children }) => {
-//   return (
-//     <MotionBox
-//       animate={{
-//         opacity: 1,
-//         translateY: 0
-//       }}
-//       variants={staggerVariants}
-//     >
-//       {children}
-//     </MotionBox>
-//   );
-// };
-
-// export const CardTransition = ({ children }) => {
-//   return <MotionBox variants={variants}>{children}</MotionBox>;
-// };
 export const AnimatedAvtar = ({children}) =>{
   return (
     <motion.image
@@ -90,7 +70,7 @@ export const AnimatedAvtar = ({children}) =>{
       opacity: 1,
       translateX: 0,
       transition: {
-        duration: 0.5
+        duration: 1
       }
     }}>
      {children}
@@ -108,25 +88,25 @@ export const AnimatedHome = ({children}) =>{
       opacity: 1,
       translateX: 0,
       transition: {
-        duration: 0.5
+        duration: 1
       }
     }}>
      {children}
     </motion.span>
   )
 }
-// export const AnimatedHey = ({children}) =>{
-//   return (
-//     <motion.span
-//     animate={{
-    
-//       x: 5,
-//       x:-5,
-//       transition: {
-//         duration: 0.5
-//       }
-//     }}>
-//      {children}
-//     </motion.span>
-//   )
-// }
+
+export const AnimatedBox = ({children,delay}) =>{
+  return (
+    <motion.span
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1, 
+        transition: { duration:delay}
+      }}>
+        {children}
+        </motion.span>
+  )
+}

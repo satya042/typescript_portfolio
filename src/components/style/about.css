@@ -1,0 +1,17 @@
+.aboutCard{
+    width: 100%;
+    height: auto; 
+}
+.aboutCardContent{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid;
+    box-shadow: none !important;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding-top: 5rem;
+}

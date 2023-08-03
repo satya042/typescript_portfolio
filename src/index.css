@@ -22,3 +22,23 @@ code {
 /* .MuiButtonBase-root{
   padding: 8px 8px 8px 8px !important;
 } */
+/* #paul{
+  box-shadow: none !important;
+} */
+#Paul1{
+  offset-distance: 0px !important;
+}
+.MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-sdh9rg-MuiButtonBase-root-MuiListItemButton-root{
+  display: flex;
+  justify-content: space-around !important;
+}
+.css-1dp8yph-MuiPaper-root{
+  display: absolute;
+  top:0px  !important;
+  bottom:0px  !important;
+  right:0px  !important;
+  left: 0px !important;
+}
+.MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1dp8yph-MuiPaper-root{
+  padding: 0px 0px 0px 0px !important;
+}

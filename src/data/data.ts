@@ -1,8 +1,10 @@
-import PhaedraLogo from "../assets/logos/phaedra.jpeg";
-import BrainxLogo from "../assets/logos/brainxtech.png";
-import CodenyaLogo from "../assets/logos/codenya.png";
-import BrainplowLogo from "../assets/logos/brainplow.jpg";
-import UniLogo from "../assets/logos/fast.png";
+// import PhaedraLogo from "../assets/logos/phaedra.jpeg";
+// import UniLogo from "../assets/logos/fast.png";
+// import BrainxLogo from "../assets/logos/brainxtech.png";
+import HighRadiusLogo from "../assets/logos/highradius.png";
+import CavissonLogo from "../assets/logos/cavisson.jpeg";
+import GIETLogo from "../assets/logos/giet.jpeg";
+import NISTLogo from "../assets/logos/nist.jpeg";
 import figma from "../assets/skills/figma.png";
 import vscode from "../assets/skills/vscode.png";
 import react from "../assets/skills/react.png";
@@ -22,40 +24,40 @@ import docean from "../assets/skills/digital-ocean.png";
 import aws from "../assets/skills/aws.png";
 //import nginx from "../assets/skills/nginx.png";
 import nginx from "../assets/skills/nginx.png"
-import { item } from "../components/page-transitions";
+//import { item } from "../components/page-transitions";
  
 export const companies = [
+  // {
+  //   title: "Phaedra Solutions",
+  //   alt: "PS image",
+  //   role: "Senior Software Engineer",
+  //   skills: ["ruby", "rails", "typescript", "javascript", "react", "aws"],
+  //   period: "2019 - Present",
+  //   logo: PhaedraLogo
+  //   },
+  // {
+  //   title: "Brainx Technologies",
+  //   alt: "BT image",
+  //   role: "Software Engineer",
+  //   skills: ["ruby", "rails", "javascript", "python"],
+  //   period: "2018 - 2019",
+  //   logo: BrainxLogo
+  // },
   {
-    title: "Phaedra Solutions",
-    alt: "PS image",
-    role: "Senior Software Engineer",
-    skills: ["ruby", "rails", "typescript", "javascript", "react", "aws"],
-    period: "2019 - Present",
-    logo: PhaedraLogo
-    },
-  {
-    title: "Brainx Technologies",
-    alt: "BT image",
-    role: "Software Engineer",
-    skills: ["ruby", "rails", "javascript", "python"],
-    period: "2018 - 2019",
-    logo: BrainxLogo
+    title: "Cavisson Systems",
+    alt: "Cavisson image",
+    role: "Associate Software Engineer",
+    skills: ["Angular", "Java","Perfermace Testing"],
+    period: "2023 - Present",
+    logo: CavissonLogo
   },
   {
-    title: "Codenya Studio",
-    alt: "CS image",
-    role: "Co-founder, CTO",
-    skills: ["ruby", "rails", "python", "typescript", "react", "aws"],
-    period: "2018 - Present",
-    logo: CodenyaLogo
-  },
-  {
-    title: "Brainplow",
-    alt: "Brainplow image",
-    role: "Software Engineer",
-    skills: ["javascript", "python", "angular"],
-    period: "2017 - 2018",
-    logo: BrainplowLogo
+    title: "HighRadius",
+    alt: "HighRadius image",
+    role: "RPA Intern",
+    skills: ["Hiberanate", "MySql", "Automation Testing"],
+    period: "2022 - 2023",
+    logo: HighRadiusLogo
   }
 ];
 
@@ -65,10 +67,10 @@ export const institutes = [
     title: "Gandhi Institute of Engineering & Technology",
     alt: "Nuces image",
     role: "Bachelor's Degree in Computer Science",
-    skills: ["project management", "web development", "data structures"],
+    skills: ["project management", "software development", "data structures"],
     period: "2019 - 2023",
     startingYear: "2019",
-    logo: UniLogo,
+    logo: GIETLogo,
     awards: [
       {
         title: "Speed Programming Battle",
@@ -98,7 +100,7 @@ export const institutes = [
     skills: ["mathematic", "chemistry", "physics"],
     period: "2017 - 2019",
     startingYear: "2017",
-    logo: ""
+    logo: NISTLogo
   }
 ];
 
@@ -199,46 +201,46 @@ export const skills = [
     image: redis,
     item : 12
   },
-  // {
-  //   name: "Heroku",
-  //   description: "Devops",
-  //   link: "https://www.heroku.com/",
-  //   type: "devops",
-  //   image: heroku
-  // },
-  // {
-  //   name: "AWS",
-  //   description: "Devops",
-  //   link: "https://aws.amazon.com/",
-  //   type: "devops",
-  //   image: aws
-  // },
-  // {
-  //   name: "Digital Ocean",
-  //   description: "Devops",
-  //   link: "https://www.digitalocean.com/",
-  //   type: "devops",
-  //   image: docean
-  // },
-  // {
-  //   name: "Nginx",
-  //   description: "Web server",
-  //   link: "https://www.nginx.com/",
-  //   type: "devops",
-  //   image: nginx
-  // },
-  // {
-  //   name: "Visual Studio Code",
-  //   description: "Code editor of choice",
-  //   link: "https://code.visualstudio.com/",
-  //   type: "development",
-  //   image: vscode
-  // },
-  // {
-  //   name: "Figma",
-  //   description: "Collaborative Design",
-  //   link: "https://www.figma.com/",
-  //   type: "design",
-  //   image: figma
-  // }
+  {
+    name: "Heroku",
+    description: "Devops",
+    link: "https://www.heroku.com/",
+    type: "devops",
+    image: heroku
+  },
+  {
+    name: "AWS",
+    description: "Devops",
+    link: "https://aws.amazon.com/",
+    type: "devops",
+    image: aws
+  },
+  {
+    name: "Digital Ocean",
+    description: "Devops",
+    link: "https://www.digitalocean.com/",
+    type: "devops",
+    image: docean
+  },
+  {
+    name: "Nginx",
+    description: "Web server",
+    link: "https://www.nginx.com/",
+    type: "devops",
+    image: nginx
+  },
+  {
+    name: "Visual Studio Code",
+    description: "Code editor of choice",
+    link: "https://code.visualstudio.com/",
+    type: "development",
+    image: vscode
+  },
+  {
+    name: "Figma",
+    description: "Collaborative Design",
+    link: "https://www.figma.com/",
+    type: "design",
+    image: figma
+  }
 ];

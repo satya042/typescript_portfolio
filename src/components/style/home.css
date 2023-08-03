@@ -19,3 +19,9 @@
       transform: translate3d(4px, 0, 0);
     }
   }
+  .MuiPaper-root-MuiCard-root{
+    box-shadow: none  !important;
+  }
+  .css-3tlylj-MuiPaper-root-MuiCard-root {
+    box-shadow: none !important;
+  }

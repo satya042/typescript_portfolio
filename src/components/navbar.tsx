@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useContext } from "react";
 import { useTheme, Theme, Box, AppBar, Toolbar, IconButton, Avatar, Typography, Container, Button, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import { makeStyles, createStyles } from '@mui/styles';
 import UserIcon from '../assets/user_icon.png';
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -15,30 +14,11 @@ import { RxAvatar } from "react-icons/rx";
 import { Link } from 'react-router-dom'
 
 
-
 interface NavItem {
   icon: React.ReactNode;
   name: string;
   link: string;
 }
-
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    appBar: {
-      zIndex: theme.zIndex.drawer + 1,
-    },
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
-    drawer: {
-      width: 240,
-    },
-    drawerPaper: {
-      width: 240,
-    },
-  })
-);
 
 const Navbar: React.FC = () => {
 
@@ -47,45 +27,16 @@ const Navbar: React.FC = () => {
     { name: 'Tech Stack', icon: <AiTwotoneThunderbolt />, link: '/TechStack' },
     { name: 'Open Source', icon: <BsBook />, link: '' },
   ];
+  
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
-
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
-  const classes = useStyles();
-  // const [open, isOpen] = React.useState(false);
-  //const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-
-  //const [state, setState] = React.useState({top: false,});
-  // const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-  //   setAnchorElNav(event.currentTarget);
-  // };
-
-  // const handleCloseNavMenu = () => {
-  //   setAnchorElNav(null);
-  // };
-
-  // const toggleDrawer = () =>
-  // (event: React.KeyboardEvent | React.MouseEvent) => {
-  //   if (
-  //     event.type === 'keydown' &&
-  //     ((event as React.KeyboardEvent).key === 'Tab' ||
-  //       (event as React.KeyboardEvent).key === 'Shift')
-  //   ) {
-  //     return;
-  //   }
-  //   setIsDrawerOpen(!isDrawerOpen);
-  //   // setState({ ...state, [anchor]: open });
-  // };
-
-
 
   const theme = useTheme();
-  //const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
-
   return (
-    <AppBar position="sticky" component="nav" className={classes.appBar}
+    <AppBar position="fixed" 
       sx={{
         backgroundColor: 'navbar.default',
         boxShadow: 5,
@@ -108,15 +59,15 @@ const Navbar: React.FC = () => {
               variant="temporary"
               open={isDrawerOpen}
               onClose={toggleDrawer}
-              sx={{ width: 10, zIndex: 1190 }}
               BackdropProps={{ invisible: true }}
-            >
-              <List sx={{ backgroundColor: 'primary.main' }}>
+            > 
+            <Box sx={{pt:7}}></Box>
+              <List sx={{ backgroundColor: 'navbar.default' }}>
                 {navItems.map((text, index) => (
                   <ListItem key={index} disablePadding>
                     <ListItemButton>
-                      <Link style={{ textDecoration: "none", color: 'white' }} to={text.link}>
-                        <ListItemIcon>{text.icon}</ListItemIcon>
+                      <Link style={{ textDecoration: "none", color: 'white' ,display:'flex',flexDirection:'row'}} to={text.link}>
+                        <ListItemText sx={{mr:1,pt:.2}}>{text.icon}</ListItemText>
                         <ListItemText primary={text.name} onClick={toggleDrawer} />
                       </Link>
                     </ListItemButton>
@@ -163,4 +114,3 @@ const Navbar: React.FC = () => {
   );
 }
 export default Navbar;
-

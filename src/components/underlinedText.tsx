@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactNode } from "react";
 import { Box } from "@mui/material";
-import './style.css';
+//import './style.css';
 
 interface UnderlinedTextProps {
     children: ReactNode;

@@ -18,37 +18,43 @@ export const siteConfig = {
         url: "https://github.com/satya042",
         label: "Github Account",
         type: "gray",
-        icon: <FaGithub />
+        icon: <FaGithub />,
+        color:"#a8dcfa"
       },
       {
         url: "https://twitter.com/satya042",
         label: "Twitter Account",
         type: "twitter",
-        icon: <FaTwitter />
+        icon: <FaTwitter />,
+        color:"#a8dcfa"
       },
       {
         url: "https://dev.to/satya042",
         label: "Dev Account",
         type: "gray",
-        icon: <FaDev />
+        icon: <FaDev />,
+        color:"#a8dcfa"
       },
       {
         url: "https://linkedin.com/in/satya042",
         label: "LinkedIn Account",
         type: "linkedin",
-        icon: <FaLinkedin />
+        icon: <FaLinkedin />,
+        color:"#a8dcfa"
       },
       {
         url: "https://www.quora.com/profile/satya042",
         label: "Quora Account",
         type: "red",
-        icon: <FaQuora />
+        icon: <FaQuora />,
+        color:"#a8dcfa"
       },
       {
         url: "mailto:satyaprakash27319@gmail.com",
-        label: "Mail ahmad",
+        label: "Mail satyaprakash",
         type: "gray",
-        icon: <FiMail />
+        icon: <FiMail />,
+        color:"#a8dcfa"
       }
     ]
   }
