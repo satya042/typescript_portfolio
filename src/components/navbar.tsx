@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
     <AppBar position="fixed" 
       sx={{
         backgroundColor: 'navbar.default',
-        boxShadow: 5,
+        boxShadow:isDrawerOpen? 0 : 5,
         zIndex: 1250,
       }}>
       <Container maxWidth="xl">
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
               BackdropProps={{ invisible: true }}
             > 
             <Box sx={{pt:7}}></Box>
-              <List sx={{ backgroundColor: 'navbar.default' }}>
+              <List sx={{backgroundColor: 'navbar.default' }}>
                 {navItems.map((text, index) => (
                   <ListItem key={index} disablePadding>
                     <ListItemButton>
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
             </Drawer>
           </Box>
           <Link to={'/'}>
-            <Avatar variant="circular" src={UserIcon}></Avatar>
+            <Avatar variant="circular" src={UserIcon} sx={{display:{xs:'none',md:'inline-block'}}}></Avatar>
           </Link>
           <Typography sx={{mr: 2,display: { xs: 'flex', md: 'none' },flexGrow: 1,}}> </Typography>
           <Box pl={2} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -91,15 +91,15 @@ const Navbar: React.FC = () => {
                 }}
                 startIcon={page.icon}
               >
-                <Link  style={{textDecoration:"none",color:theme.palette.mode==="dark" ?"#ffffff":"#000000" }} to={page.link}>{" "}{page.name}</Link>
+                <Link style={{textDecoration:"none",color:theme.palette.mode==="dark" ?"#ffffff":"#000000" }} to={page.link}>{" "}{page.name}</Link>
                 {/* <NavbarLink style={{ color: theme.palette.mode === "dark" ? "#ffffff" : "#000000" }} to={page.link}>{page.name}</NavbarLink> */}
               </Button>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
-            <IconButton>
-              <GitHubIcon />
-            </IconButton>
+          <Link to="https://github.com/satya042" style={{textDecoration:"none",color:"#ffffff"}}>
+          <IconButton><GitHubIcon /></IconButton>
+          </Link>
             <IconButton onClick={colorMode.toggleColorMode}>
               {theme.palette.mode === "dark" ? (
                 <DarkModeOutlinedIcon />

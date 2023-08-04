@@ -62,20 +62,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, logo, link
 const Home: React.FC = () => {
   return (
     <Box sx={{ maxWidth: '100%', backgroundColor: "primary.main", display: "flex", justifyContent: "center", flexDirection: "column" }}>
-      <Box flexDirection={{ xs: "column", md: "row" }} sx={{ backgroundColor: "primary.main", display: 'flex', justifyContent: 'center', width: { xs: '100%', md: '45%' }, height: '100%', marginLeft: { xs: 0, md: '26%' }, flexGrow: 1 }}  >
+      <Box flexDirection={{ xs: "column", md: "row" }} sx={{ backgroundColor: "primary.main", display: 'flex', justifyContent: 'center',alignItems:'center', width: { xs: '100%', md: '45%' }, height: '100%', marginLeft: { xs: 0, md: '26%' }, flexGrow: 1 }}  >
         <AnimatedAvtar>
-          <Avatar variant="circular" sx={{ width: 175, height: 175, marginTop: { xs: 10, md: 15 }, justifyContent: "center", marginLeft: { xs: '28%', md: 0 } }} src={UserIcon}></Avatar>
+          <Avatar variant="circular" sx={{ width: 175, height: 175, marginTop: { xs: 10, md:-1 }, justifyContent: "center",}} src={UserIcon}></Avatar>
         </AnimatedAvtar>
         <AnimatedHome>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: { xs: 3, md: 6 } }}>
             <UnderlinedText><Box className="face" sx={{ whiteSpace: 'nowrap', fontSize: 30, fontWeight: 'bold', mt: 5, mb: 2 }}>Hey! 👋</Box> </UnderlinedText>
-            <Box sx={{ fontSize: 25, fontWeight: 500, textAlign: 'left', }}>
+            <Box sx={{ fontSize: 24, fontWeight: 500, textAlign: 'left', }}>
               <AnimatedBox delay={4}>My name is{" "}</AnimatedBox>
               <AnimatedBox delay={5}><Box component="span" sx={{ fontWeight: 600, }}>Satyaprakash</Box>{" "} and I&apos;m a{" "}</AnimatedBox>
               <AnimatedBox delay={4}><Box component="span" whiteSpace={"nowrap"} >Full Stack Developer and</Box>{" "}</AnimatedBox>
               <AnimatedBox delay={5}><Box component="span" whiteSpace={"nowrap"} > an open source lover&nbsp;</Box>from{" "}</AnimatedBox>
               <AnimatedBox delay={4}><Box component="span" whiteSpace={"nowrap"}>India in</Box></AnimatedBox>
-              <AnimatedBox delay={4.5}><Box fontSize={25} fontWeight="500" mt={5} textAlign="left">
+              <AnimatedBox delay={4.5}><Box fontSize={24} fontWeight="500" mt={5} textAlign="left">
                 This is my digital garden, where I write about the things I'm working
                 on and share what I've learned. 😊
               </Box></AnimatedBox>
@@ -83,6 +83,7 @@ const Home: React.FC = () => {
           </Box>
         </AnimatedHome>
       </Box>
+      
     {/* <Projects/> */}
     <Box sx={{ display: 'flex', backgroundColor: 'primary.main',justifyContent: 'center', width: { xs: '100%', md: '45%' }, height: '100%',marginLeft:{xs:0,md:'26%'},flexDirection:"column",padding: { xs: 3, md: 6 }}}>
     <AnimatedAvtar>
