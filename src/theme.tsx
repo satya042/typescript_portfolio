@@ -239,7 +239,7 @@ export const useMode = () => {
 }
 
 
-export const getTagColor = (type: string,mode:PaletteMode) => {
+export const getTagColour = (type: string,mode:PaletteMode) => {
   type = type.toLowerCase()
   if (type === "rails" || type === "ruby") {
     return mode === "dark" ? "#c58d90" : "#8d3737";
@@ -247,16 +247,28 @@ export const getTagColor = (type: string,mode:PaletteMode) => {
     return mode === "dark" ? "cyan" : "#086f83";
   }else if(type === "javascript"){
     return mode === "dark" ? "yellow" : "#744210";
-  }else if(type == 'angular'){
+  }else if(type ==='angular'){
     return mode === "dark" ? "red":"#910017";
-   }else if(type === "java"|| "hibernate"){
+   }else if(type === "java"|| type === "hibernate"){
     return mode === "dark" ? "":"";
-  }else if(type === "automation testing" || "performance testing"){
-    return mode === "dark" ? "":"";
+  }else if(type === "automation testing" || type === "performance testing"){
+    return mode === "dark" ? "blue":"darkblue";
+  }else if(type === "github"){
+    return mode === "dark" ? "white":"black";    
+  }else if(type === "twitter"){
+    return mode === "dark" ? "#00acee":"#00acee";    
+  }else if(type === "dev"){
+    return mode === "dark" ? "white":"black";    
+  }else if(type === "linkedin"){
+    return mode === "dark" ? "#1381ab":"#1381ab";    
+  }else if(type === "quora"){
+    return mode === "dark" ? "#d21c38":"#d21c38";    
+  }else if(type === "mail"){
+    return mode === "dark" ? "white":"black";    
   }
 };
 
-export const BackgroundTagColor = (type: string,mode:PaletteMode) => {
+export const getBackgroundColour = (type: string,mode:PaletteMode) => {
   type = type.toLowerCase();
   if (type === "rails" || type === "ruby") {
     return mode === "dark" ? "#3f3842" : "#fed7d7";
@@ -266,17 +278,29 @@ export const BackgroundTagColor = (type: string,mode:PaletteMode) => {
     return mode === "dark" ? "#3f423b" : "#fefcbf";
   }else if(type === "angular"){
     return mode === "dark" ? "#6e5454":"#ffa491";
-  }else if(type === "java"|| "hibernate"){
+  }else if(type === "java"|| type === "hibernate"){
     return mode === "dark" ? "":"";
-  }else if(type === "automation testing" || "performance testing"){
+  }else if(type === "automation testing" || type ==="performance testing"){
     return mode === "dark" ? "":"";
   }else if(type === "project management"){
     return mode === "dark"? "":"";
+  }else if(type === "github"){
+    return mode === "dark" ? "#3b3b3b":"#e7e7e7";    
+  }else if(type === "twitter"){
+    return mode === "dark" ? "#1b4052":"#e3f1fc";    
+  }else if(type === "dev"){
+    return mode === "dark" ? "#3b3b3b":"#b9b9b9";    
+  }else if(type === "linkedin"){
+    return mode === "dark" ? "#172c38":"#c6e3fa";    
+  }else if(type === "quora"){
+    return mode === "dark" ? "#3f3842":"#ffdddb";    
+  }else if(type === "mail"){
+    return mode === "dark" ? "#3b3b3b":"#e7e7e7";    
   }
 };
 
 
 
 
-//#8d3737
+//#8d3737 c6e3fa
 
