@@ -50,8 +50,7 @@ export const tokens = (mode: PaletteMode) => ({
         800: "#2a2d64",
         900: "#151f2e",//#151612
       },
-    }
-    : {
+    } : {
       grey: {
         100: "#141414",
         200: "#292929",
@@ -109,7 +108,7 @@ export const themeSettings = (mode: PaletteMode) => {
         ? {
           // palette values for dark mode
           primary: {
-            main: colors.primary[500],
+            main: colors.primary[500],//#141a1f
           },
           secondary: {
             main: colors.greenAccent[500],
@@ -125,7 +124,9 @@ export const themeSettings = (mode: PaletteMode) => {
           navbar:{
             default:colors.blueAccent[900],
             main:"#ffffff",
-            hover:colors.blueAccent[900]        
+            hover:colors.blueAccent[900] ,
+            icon:"#66b2ff",
+            list:'#263959'       
           },
           card:{
             main:"#1a202c", //#1a202c
@@ -151,7 +152,9 @@ export const themeSettings = (mode: PaletteMode) => {
           navbar:{
             default:colors.blueAccent[900],
             main:"#000000",
-            hover:colors.blueAccent[800]
+            hover:colors.blueAccent[800],
+            icon:'#66b2ff' ,
+            list:'#ffffff',
           },
           card:{
             main:colors.blueAccent[900],

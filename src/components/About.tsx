@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme,Box, Grid, Typography,styled, Paper, Stack ,Card,CardContent,CardMedia} from '@mui/material';
 import { companies, institutes } from "../data/data";
-import { getTagColor, BackgroundTagColor } from "../theme";
+import { getTagColour, getBackgroundColour } from "../theme";
 import UnderlinedText from "./underlinedText";
 import "./style/about.css"
 
@@ -13,11 +13,12 @@ const CardContentNoPadding = styled(CardContent)(`
 `);
 
 const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(.5),
-    textAlign: 'center',
-    borderRadius: '7px',
-    boxShadow: 'none',
+  ...theme.typography.body2,
+  padding: theme.spacing(0.5, 1, 0.5, 1),
+  textAlign: 'center',
+  borderRadius: '7px',
+  alignSelf:'center',
+  boxShadow: 'none',
 }));
 
 
@@ -35,7 +36,7 @@ const AboutCard: React.FC<CardProps> = ({ title, role, skills, period, logo }) =
     const theme = useTheme();
     return (
         <Box className="aboutCard">
-            <Card className="aboutCardContent" sx={{ backgroundColor: 'card.main', borderColor: "card.border" ,borderRadius:'10px',flexGrow:8}}>
+            <Card id="index" className="aboutCardContent" sx={{ backgroundColor: 'card.main', borderColor: "card.border" ,flexGrow:8}}>
                 <CardMedia component="img" src={logo} sx={{ borderRadius: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '9%', m: 1, height: '9%' }} />
                 <Box sx={{ display: 'flex', flexDirection: 'column',flexGrow:1, p: 1 }}>
                     <CardContentNoPadding sx={{ display: 'flex', flexDirection: 'row',justifyContent:'space-between' }} >
@@ -46,7 +47,7 @@ const AboutCard: React.FC<CardProps> = ({ title, role, skills, period, logo }) =
                         <Typography color="inherit" sx={{ fontSize: '15px', fontWeight: 'bold' }} noWrap={true} >{role}</Typography>
                     </CardContentNoPadding>
                     <Stack direction="row" spacing={1}>
-                        {skills.map(tech => (<Item sx={{ color: getTagColor(tech,theme.palette.mode), backgroundColor: BackgroundTagColor(tech,theme.palette.mode) }}> {tech} </Item>))}
+                        {skills.map(tech => (<Item sx={{ color: getTagColour(tech,theme.palette.mode), backgroundColor: getBackgroundColour(tech,theme.palette.mode) }}> {tech} </Item>))}
                     </Stack>
                 </Box>
             </Card>
@@ -65,36 +66,51 @@ const AboutCard: React.FC<CardProps> = ({ title, role, skills, period, logo }) =
 
 const About: React.FC = () => {
     return (
-        <Box sx={{ display: 'flex', backgroundColor: 'primary.main', width: '100%', height: '100%',flexDirection:'column',alignItems:'center' }}>
-            <Box className='about'>
-            <UnderlinedText><Typography sx={{ fontSize: 30, fontWeight: 'bold', m:1,mt:'3%' }} >Career</Typography></UnderlinedText>
-            <Grid>
-                {companies.map((company, index) => (
-                    <Box key={index} sx={{ m: 1, display: "flex", justifyContent: "space-between" }}>
-                        <AboutCard
-                            title={company.title}
-                            role={company.role}
-                            skills={company.skills}
-                            period={company.period}
-                            logo={company.logo} colorMode={''} alt={''}  />
-                    </Box>
-                ))}
-            </Grid>
-            <UnderlinedText><Typography sx={{ fontSize: 30, fontWeight: 'bold', m:1,mt:'3%' }} >Education</Typography></UnderlinedText>
-            <Grid>
-                {institutes.map((institute, index) => (
-                    <Box key={index} sx={{ m: 1, display: "flex", justifyContent: "space-between" }}>
-                        <AboutCard
-                            title={institute.title}
-                            role={institute.role}
-                            skills={institute.skills}
-                            period={institute.period}
-                            logo={institute.logo} colorMode={''} alt={''}  />
-                    </Box>
-                ))}
-            </Grid>
-            </Box>
-        </Box>)
+      <Box className="about-main" sx={{ backgroundColor: "primary.main" }}>
+        <Box className="about">
+          <UnderlinedText>
+            <Typography sx={{ fontSize: 30, fontWeight: "bold", m: 1, mt: "2%" }}>
+              Career
+            </Typography>
+          </UnderlinedText>
+          <Grid>
+            {companies.map((company, index) => (
+              <Box className="cards" key={index}>
+                <AboutCard
+                  title={company.title}
+                  role={company.role}
+                  skills={company.skills}
+                  period={company.period}
+                  logo={company.logo}
+                  colorMode={""}
+                  alt={""}
+                />
+              </Box>
+            ))}
+          </Grid>
+          <UnderlinedText>
+            <Typography sx={{ fontSize: 30, fontWeight: "bold", m: 1, mt: "4%" }}>
+              Education
+            </Typography>
+          </UnderlinedText>
+          <Grid>
+            {institutes.map((institute, index) => (
+              <Box className="cards" key={index}>
+                <AboutCard
+                  title={institute.title}
+                  role={institute.role}
+                  skills={institute.skills}
+                  period={institute.period}
+                  logo={institute.logo}
+                  colorMode={""}
+                  alt={""}
+                />
+              </Box>
+            ))}
+          </Grid>
+        </Box>
+      </Box>
+    );
 }
 export default About;
 

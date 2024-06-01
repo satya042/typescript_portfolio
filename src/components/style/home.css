@@ -25,3 +25,10 @@
   .css-3tlylj-MuiPaper-root-MuiCard-root {
     box-shadow: none !important;
   }
+
+  .tags{
+    padding-top: -1px;
+    padding-bottom: -1px;
+    padding-left: 1px;
+    padding-right: 1px;
+  }

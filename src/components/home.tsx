@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useTheme,Box, Avatar, styled, Paper,Grid, Link, Stack,Card ,CardContent,CardMedia,Typography} from "@mui/material";
-import { getTagColor ,BackgroundTagColor} from "../theme";
+import { getTagColour ,getBackgroundColour} from "../theme";
 import { projectsList } from '../data/project-list';
 import UserIcon from '../assets/user_icon.png';
 import UnderlinedText from "./underlinedText";
@@ -25,10 +25,17 @@ const CardContentNoPadding = styled(CardContent)(`
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
-  padding: theme.spacing(.5),
+  padding: theme.spacing(0.5, 1, 0.5, 1),
   textAlign: 'center',
   borderRadius: '7px',
+  alignSelf:'center',
+  boxShadow: 'none',
+  // '&.MuiPaper-root': {
+  // paddingBottom :theme.spacing(0),
+  // }
 }));
+
+
 
 
 const ProjectCard: React.FC<ProjectCardProps> = ({title, description, logo, link, technologies }) => {
@@ -47,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({title, description, logo, link
               <Link href={link} color="inherit" sx={{ textDecoration: 'none', fontSize: '18px', fontWeight: 'bold' }} noWrap={true} >{title}</Link>
             </CardContentNoPadding>
             <Stack direction="row" spacing={1} sx={{ ml: 1 }}>
-              {technologies.map(tech => (<Item sx={{ color: getTagColor(tech, theme.palette.mode), backgroundColor: BackgroundTagColor(tech, theme.palette.mode) }}> {tech} </Item>))}
+              {technologies.map(tech => (<Item className="tags" sx={{ color: getTagColour(tech, theme.palette.mode), backgroundColor: getBackgroundColour(tech, theme.palette.mode)}}> {tech} </Item>))}
             </Stack>
           </Box>
           <Typography variant="body1" color="text.secondary" fontSize='14px' component="div" sx={{ display: '-webkit-box', overflow: 'hidden', WebkitBoxOrient: 'vertical', WebkitLineClamp: showFullDescription ? 'unset' : 2 }}>

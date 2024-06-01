@@ -1,6 +1,19 @@
+.about-main{
+    min-height: 92.5vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center; 
+}
 .aboutCard{
     width: 100%;
     height: auto; 
+}
+.cards{
+    margin: 8px;
+    display: flex;
+    justify-content: space-between;    
 }
 .aboutCardContent{
     display: flex;
@@ -14,4 +27,7 @@
     align-content: center;
     flex-direction: column;
     padding-top: 5rem;
+}
+#index{
+    border-radius: 10px;
 }
