@@ -1,0 +1,32 @@
+
+
+.satya {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* This ensures the footer sticks to the bottom */
+  background-color: brown;
+}
+
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px; 
+  flex-grow: 1;
+}
+.page-content {
+  display: flex;
+  flex-grow: 1;
+}
+
+
+
+
+   
